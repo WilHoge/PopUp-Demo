@@ -1,0 +1,504 @@
+{
+"version": "v3",
+"creator": "cpdpower",
+"tenant_id": "999",
+"date": "2022-10-10T09:20:25.646Z",
+"offset": 0,
+"totalCount": 14,
+"rules": [
+{
+  "guid": "4383116e-e008-4d52-acfe-fbea4da77972",
+  "name": "39cdac42-804a-4667-ae54-993c19055f7c-1000331002",
+  "description": "39cdac42-804a-4667-ae54-993c19055f7c-1000331002",
+  "governance_type_id": "ResourceControl",
+  "trigger": [
+    [
+      "$User.Name",
+      "EQUALS",
+      "1000331002"
+    ],
+    "AND",
+    [
+      [
+        "ACL",
+        "[\"owner\"]",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ],
+    "AND",
+    [
+      [
+        "PLATFORMACL",
+        "$PlatformPermissions",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ]
+  ],
+  "action": {
+    "name": "Allow",
+    "parameters": []
+  },
+  "state": "active"
+},
+{
+  "guid": "bd835e1a-60e7-4218-98df-672e17e95825",
+  "name": "ProtectCardNumber",
+  "description": "Protect Card Number",
+  "governance_type_id": "Access",
+  "trigger": [
+    "$Asset.InferredClassification",
+    "CONTAINS",
+    [
+      "$5a06ecb5-a915-4081-801e-6551127da67c_18c80b6d-8e9b-4efa-ad67-e887a8d3cc62"
+    ]
+  ],
+  "action": {
+    "name": "Transform",
+    "subaction": {
+      "name": "pseudonymizeDataClasses",
+      "parameters": [
+        {
+          "name": "dataclass_ids",
+          "value": [
+            "5a06ecb5-a915-4081-801e-6551127da67c_18c80b6d-8e9b-4efa-ad67-e887a8d3cc62"
+          ]
+        }
+      ]
+    }
+  },
+  "state": "active"
+},
+{
+  "guid": "4d1147ca-590e-4ebd-b619-14637b8afe0e",
+  "name": "ProtectDateOfBirth",
+  "description": "Protect Date Of Birth",
+  "governance_type_id": "Access",
+  "trigger": [
+    "$Asset.InferredClassification",
+    "CONTAINS",
+    [
+      "$5a06ecb5-a915-4081-801e-6551127da67c_918af388-245f-4384-876f-b50027ae4d26"
+    ]
+  ],
+  "action": {
+    "name": "Transform",
+    "subaction": {
+      "name": "redactDataClasses",
+      "parameters": [
+        {
+          "name": "dataclass_ids",
+          "value": [
+            "5a06ecb5-a915-4081-801e-6551127da67c_918af388-245f-4384-876f-b50027ae4d26"
+          ]
+        }
+      ]
+    }
+  },
+  "state": "active"
+},
+{
+  "guid": "6f7ad6e1-0330-4e1f-89f0-f419b44d99c7",
+  "name": "d380c3c9-4f3c-4822-9d60-a7c65bb0de69-1000330999",
+  "description": "d380c3c9-4f3c-4822-9d60-a7c65bb0de69-1000330999",
+  "governance_type_id": "ResourceControl",
+  "trigger": [
+    [
+      "$User.Name",
+      "EQUALS",
+      "1000330999"
+    ],
+    "AND",
+    [
+      [
+        "ACL",
+        "[\"admin\"]",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ],
+    "AND",
+    [
+      [
+        "PLATFORMACL",
+        "$PlatformPermissions",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ]
+  ],
+  "action": {
+    "name": "Allow",
+    "parameters": []
+  },
+  "state": "active"
+},
+{
+  "guid": "7c6e12e5-a337-4000-85cd-66ef9b4d3ab2",
+  "name": "d380c3c9-4f3c-4822-9d60-a7c65bb0de69-1000331002",
+  "description": "d380c3c9-4f3c-4822-9d60-a7c65bb0de69-1000331002",
+  "governance_type_id": "ResourceControl",
+  "trigger": [
+    [
+      "$User.Name",
+      "EQUALS",
+      "1000331002"
+    ],
+    "AND",
+    [
+      [
+        "ACL",
+        "[\"owner\"]",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ],
+    "AND",
+    [
+      [
+        "PLATFORMACL",
+        "$PlatformPermissions",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ]
+  ],
+  "action": {
+    "name": "Allow",
+    "parameters": []
+  },
+  "state": "active"
+},
+{
+  "guid": "39b14830-1119-46fc-9c48-3394b8b29bb6",
+  "name": "e39ada11-8338-3704-90e3-681a71e7c839-1000330999",
+  "description": "e39ada11-8338-3704-90e3-681a71e7c839-1000330999",
+  "governance_type_id": "ResourceControl",
+  "trigger": [
+    [
+      "$User.Name",
+      "EQUALS",
+      "1000330999"
+    ],
+    "AND",
+    [
+      [
+        "ACL",
+        "[\"owner\"]",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ],
+    "AND",
+    [
+      [
+        "PLATFORMACL",
+        "$PlatformPermissions",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ]
+  ],
+  "action": {
+    "name": "Allow",
+    "parameters": []
+  },
+  "state": "active"
+},
+{
+  "guid": "a1c31a3a-9078-4670-ae39-e133b70b5273",
+  "name": "e39ada11-8338-3704-90e3-681a71e7c839-1000331002",
+  "description": "e39ada11-8338-3704-90e3-681a71e7c839-1000331002",
+  "governance_type_id": "ResourceControl",
+  "trigger": [
+    [
+      "$User.Name",
+      "EQUALS",
+      "1000331002"
+    ],
+    "AND",
+    [
+      [
+        "ACL",
+        "[\"admin\"]",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ],
+    "AND",
+    [
+      [
+        "PLATFORMACL",
+        "$PlatformPermissions",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ]
+  ],
+  "action": {
+    "name": "Allow",
+    "parameters": []
+  },
+  "state": "active"
+},
+{
+  "guid": "f5a64068-d52e-4364-87ec-0758708dd14a",
+  "name": "e39ada11-8338-3704-90e3-681a71e7c839-ALLUSERS",
+  "description": "e39ada11-8338-3704-90e3-681a71e7c839-ALLUSERS",
+  "governance_type_id": "ResourceControl",
+  "trigger": [
+    [
+      [
+        "ACL",
+        "[\"viewer\"]",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ],
+    "AND",
+    [
+      [
+        "PLATFORMACL",
+        "$PlatformPermissions",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ]
+  ],
+  "action": {
+    "name": "Allow",
+    "parameters": []
+  },
+  "state": "active"
+},
+{
+  "guid": "ae8da55c-724b-4c1b-be76-741685092713",
+  "name": "eb5cbd85-3b85-492c-8bda-aaf08a16a0cd-1000330999",
+  "description": "eb5cbd85-3b85-492c-8bda-aaf08a16a0cd-1000330999",
+  "governance_type_id": "ResourceControl",
+  "trigger": [
+    [
+      "$User.Name",
+      "EQUALS",
+      "1000330999"
+    ],
+    "AND",
+    [
+      [
+        "ACL",
+        "[\"admin\"]",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ],
+    "AND",
+    [
+      [
+        "PLATFORMACL",
+        "$PlatformPermissions",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ]
+  ],
+  "action": {
+    "name": "Allow",
+    "parameters": []
+  },
+  "state": "active"
+},
+{
+  "guid": "93d228d2-545f-4797-8d3d-6c01d118ee6d",
+  "name": "eb5cbd85-3b85-492c-8bda-aaf08a16a0cd-1000331002",
+  "description": "eb5cbd85-3b85-492c-8bda-aaf08a16a0cd-1000331002",
+  "governance_type_id": "ResourceControl",
+  "trigger": [
+    [
+      "$User.Name",
+      "EQUALS",
+      "1000331002"
+    ],
+    "AND",
+    [
+      [
+        "ACL",
+        "[\"owner\"]",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ],
+    "AND",
+    [
+      [
+        "PLATFORMACL",
+        "$PlatformPermissions",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ]
+  ],
+  "action": {
+    "name": "Allow",
+    "parameters": []
+  },
+  "state": "active"
+},
+{
+  "guid": "adf3ce7b-3865-444a-89b4-5f6ffc52e465",
+  "name": "eb5cbd85-3b85-492c-8bda-aaf08a16a0cd-ALLUSERS",
+  "description": "eb5cbd85-3b85-492c-8bda-aaf08a16a0cd-ALLUSERS",
+  "governance_type_id": "ResourceControl",
+  "trigger": [
+    [
+      [
+        "ACL",
+        "[\"viewer\"]",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ],
+    "AND",
+    [
+      [
+        "PLATFORMACL",
+        "$PlatformPermissions",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ]
+  ],
+  "action": {
+    "name": "Allow",
+    "parameters": []
+  },
+  "state": "active"
+},
+{
+  "guid": "5f57cdf7-1b26-488e-9273-0ed42e81ad80",
+  "name": "eebd338d-dbd5-37e4-9e4a-1296de82963a-1000330999",
+  "description": "eebd338d-dbd5-37e4-9e4a-1296de82963a-1000330999",
+  "governance_type_id": "ResourceControl",
+  "trigger": [
+    [
+      "$User.Name",
+      "EQUALS",
+      "1000330999"
+    ],
+    "AND",
+    [
+      [
+        "ACL",
+        "[\"owner\"]",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ],
+    "AND",
+    [
+      [
+        "PLATFORMACL",
+        "$PlatformPermissions",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ]
+  ],
+  "action": {
+    "name": "Allow",
+    "parameters": []
+  },
+  "state": "active"
+},
+{
+  "guid": "f7fd351a-a85b-470f-8eb8-72d1e66835bd",
+  "name": "eebd338d-dbd5-37e4-9e4a-1296de82963a-1000331002",
+  "description": "eebd338d-dbd5-37e4-9e4a-1296de82963a-1000331002",
+  "governance_type_id": "ResourceControl",
+  "trigger": [
+    [
+      "$User.Name",
+      "EQUALS",
+      "1000331002"
+    ],
+    "AND",
+    [
+      [
+        "ACL",
+        "[\"admin\"]",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ],
+    "AND",
+    [
+      [
+        "PLATFORMACL",
+        "$PlatformPermissions",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ]
+  ],
+  "action": {
+    "name": "Allow",
+    "parameters": []
+  },
+  "state": "active"
+},
+{
+  "guid": "b1829730-fbe2-408a-b415-d7ee4ee161de",
+  "name": "eebd338d-dbd5-37e4-9e4a-1296de82963a-ALLUSERS",
+  "description": "eebd338d-dbd5-37e4-9e4a-1296de82963a-ALLUSERS",
+  "governance_type_id": "ResourceControl",
+  "trigger": [
+    [
+      [
+        "ACL",
+        "[\"viewer\"]",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ],
+    "AND",
+    [
+      [
+        "PLATFORMACL",
+        "$PlatformPermissions",
+        "$User.Operation"
+      ],
+      "EQUALS",
+      "true"
+    ]
+  ],
+  "action": {
+    "name": "Allow",
+    "parameters": []
+  },
+  "state": "active"
+}
+]
+}
