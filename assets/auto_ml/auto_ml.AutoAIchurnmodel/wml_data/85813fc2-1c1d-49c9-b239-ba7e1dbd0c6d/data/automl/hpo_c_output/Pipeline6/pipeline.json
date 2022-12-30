@@ -1,0 +1,80 @@
+{
+  "doc_type": "pipeline",
+  "version": "2.0",
+  "primary_pipeline": "hpo_c_output_Pipeline6",
+  "pipelines": [
+    {
+      "id": "hpo_c_output_Pipeline6",
+      "type": "execution_node",
+      "runtime_ref": "hybrid",
+      "op": "wml-http-score",
+      "nodes": [
+        {
+          "op": "ColumnSelector",
+          "id": "0",
+          "parameters": {
+            "ColumnSelector(columns_indices_list": "[5, 6, 7, 9, 10, 11, 12, 13, 15, 16, 17, 18,                                     19, 21, 24, 25, 26, 27, 28, 29, 30, 31, 32,                                     33, 34, 35, 37, 38, 39, 40, ...]"
+          },
+          "type": "execution_node",
+          "runtime_ref": "autoai"
+        },
+        {
+          "op": "PreprocessingTransformer",
+          "id": "1",
+          "parameters": {
+            "cat_enc_dtype": "<class 'numpy.float64'>",
+            "cat_enc_encoding": "'ordinal'",
+            "cat_enc_handle_unknown": "'error'",
+            "cat_imp_strategy": "'most_frequent'",
+            "missing_values_reference_list": "['', '-', '?', nan]",
+            "num_imp_axis": "0",
+            "num_imp_copy": "True",
+            "num_imp_missing_values": "'NaN'",
+            "num_imp_strategy": "'median'",
+            "num_imp_verbose": "0",
+            "num_scaler_copy": "True",
+            "num_scaler_use_scaler_flag": "False",
+            "num_scaler_with_mean": "False",
+            "num_scaler_with_std": "False"
+          },
+          "type": "execution_node",
+          "runtime_ref": "autoai"
+        },
+        {
+          "op": "autoai_libs.cognito.transforms.transform_utils.pca",
+          "id": "2",
+          "type": "execution_node",
+          "runtime_ref": "autoai"
+        },
+        {
+          "op": "autoai_libs.cognito.transforms.transform_utils.FS1",
+          "id": "3",
+          "type": "execution_node",
+          "runtime_ref": "autoai"
+        },
+        {
+          "op": "LogisticRegression",
+          "id": "4",
+          "parameters": {},
+          "type": "execution_node",
+          "runtime_ref": "autoai"
+        }
+      ]
+    }
+  ],
+  "runtimes": [
+    {
+      "app_data": {
+        "wml_data": {
+          "hardware_spec": {
+            "id": "c076e82c-b2a7-4d20-9c0f-1f0c2fdf5a24",
+            "name": "M"
+          }
+        }
+      },
+      "id": "autoai",
+      "name": "auto_ai.kb",
+      "version": "sha256:7833314934283fec6318b091e32763644fbdc30703e815cee6ccd51d9eafbe38"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "doc_type": "pipeline",
+  "pipelines": [{
+    "id": "07394b44-09ef-47a8-b71c-74f748972243",
+    "nodes": [{
+      "id": "automl",
+      "op": "wml-http-score",
+      "outputs": [{
+        "id": "automl"
+      }],
+      "parameters": {
+        "output_logs": true,
+        "input_file_separator": ",",
+        "stage_flag": true,
+        "optimization": {
+          "compute_pipeline_notebooks_flag": true,
+          "cv_num_folds": 3,
+          "daub_adaptive_subsampling_max_mem_usage": 9000000000,
+          "global_stage_include_batched_ensemble_estimators": ["BatchedTreeEnsembleClassifier(RandomForestClassifier)", "BatchedTreeEnsembleClassifier(ExtraTreesClassifier)", "BatchedTreeEnsembleClassifier(XGBClassifier)", "BatchedTreeEnsembleClassifier(LGBMClassifier)", "BatchedTreeEnsembleClassifier(SnapRandomForestClassifier)", "BatchedTreeEnsembleClassifier(SnapBoostingMachineClassifier)"],
+          "holdout_param": 0.48,
+          "label": "CHURN",
+          "learning_type": "classification",
+          "max_num_daub_ensembles": 4,
+          "positive_label": "1.00",
+          "run_cognito_flag": true,
+          "scorer_for_ranking": "f1",
+          "train_sample_columns_index_list": [5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55]
+        },
+        "n_parallel_data_connections": 4.0,
+        "one_vs_all_file": true,
+        "output_model": {
+          "location": "/projects/b93c5f96-2833-44e1-978a-50306a3b23f6/assets/auto_ml/auto_ml.AutoAIchurnmodel/wml_data/85813fc2-1c1d-49c9-b239-ba7e1dbd0c6d/data/automl/hpo_c_output/Pipeline10/model.pickle",
+          "name": "automl"
+        }
+      },
+      "runtime_ref": "autoai",
+      "type": "execution_node"
+    }],
+    "runtime_ref": "hybrid"
+  }],
+  "primary_pipeline": "07394b44-09ef-47a8-b71c-74f748972243",
+  "runtimes": [{
+    "app_data": {
+      "wml_data": {
+        "hardware_spec": {
+          "id": "c076e82c-b2a7-4d20-9c0f-1f0c2fdf5a24",
+          "name": "M"
+        },
+        "software_spec": {
+          "name": "autoai-kb_rt22.2-py3.10"
+        }
+      }
+    },
+    "id": "autoai",
+    "name": "auto_ai.kb",
+    "version": "sha256:7833314934283fec6318b091e32763644fbdc30703e815cee6ccd51d9eafbe38"
+  }],
+  "version": "2.0"
+}
