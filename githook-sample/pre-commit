@@ -5,12 +5,13 @@ pip install jupyter_contrib_nbextensions
 git status --porcelain | while read a b 
 do
 
-    if [ $a == 'A' ] || [ $a == 'M' ] || [ $a == 'AM' ]; then
+    if [ $a == 'A' ] || [ $a == 'M' ] || [ $a == 'AM' ] || [ $a == 'MM' ]; then
     
         if [ "${b##*.}" == "ipynb" ]; then
         
             echo "Removing output from $b"
             jupyter nbconvert --clear-output --inplace $b
+            git add $b
 
         fi
     fi
