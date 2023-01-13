@@ -48,7 +48,7 @@
                           "holdout_param": 0.48,
                           "label": "CHURN",
                           "learning_type": "classification",
-                          "max_num_daub_ensembles": 4,
+                          "max_num_daub_ensembles": 1,
                           "positive_label": "1.00",
                           "run_cognito_flag": true,
                           "scorer_for_ranking": "f1",
@@ -135,14 +135,14 @@
             }
           },
           "metadata": {
-            "created_at": "2022-12-27T15:56:56.327Z",
-            "id": "wml_pipeline.AutoAIchurnmodel",
-            "modified_at": "2022-12-27T15:56:56.347Z",
+            "created_at": "2023-01-10T16:35:26.800Z",
+            "id": "wml_pipeline.AutoAIchurnmodel-uuTp",
+            "modified_at": "2023-01-10T16:35:26.818Z",
             "name": "AutoAI: churn model",
-            "owner": "1000331005",
-            "project_id": "b93c5f96-2833-44e1-978a-50306a3b23f6",
+            "owner": "1000331004",
+            "project_id": "83a5f783-8df2-4997-ba4a-6cd91dc182c7",
             "tags": [
-              "dsx-project.b93c5f96-2833-44e1-978a-50306a3b23f6"
+              "dsx-project.83a5f783-8df2-4997-ba4a-6cd91dc182c7"
             ]
           },
           "system": {
@@ -151,11 +151,11 @@
         },
         "training_definition": {
           "metadata": {
-            "created_at": "2022-12-27T15:56:56.603Z",
-            "id": "85813fc2-1c1d-49c9-b239-ba7e1dbd0c6d",
-            "project_id": "b93c5f96-2833-44e1-978a-50306a3b23f6",
+            "created_at": "2023-01-10T16:35:27.273Z",
+            "id": "0887b7d7-1139-414e-a418-00296dc89c0b",
+            "project_id": "83a5f783-8df2-4997-ba4a-6cd91dc182c7",
             "tags": [
-              "dsx-project.b93c5f96-2833-44e1-978a-50306a3b23f6"
+              "dsx-project.83a5f783-8df2-4997-ba4a-6cd91dc182c7"
             ]
           },
           "entity": {
@@ -166,7 +166,7 @@
                   "node_id": "training"
                 }
               ],
-              "id": "wml_pipeline.AutoAIchurnmodel",
+              "id": "wml_pipeline.AutoAIchurnmodel-uuTp",
               "nodes_parameters": [
                 {
                   "node_id": "training",
@@ -174,19 +174,19 @@
                 }
               ]
             },
-            "project_id": "b93c5f96-2833-44e1-978a-50306a3b23f6",
+            "project_id": "83a5f783-8df2-4997-ba4a-6cd91dc182c7",
             "results_reference": {
               "location": {
-                "path": "/projects/b93c5f96-2833-44e1-978a-50306a3b23f6/assets/auto_ml/auto_ml.AutoAIchurnmodel/wml_data",
-                "notebooks_path": "/projects/b93c5f96-2833-44e1-978a-50306a3b23f6/assets/auto_ml/auto_ml.AutoAIchurnmodel/wml_data/85813fc2-1c1d-49c9-b239-ba7e1dbd0c6d/notebooks",
-                "training": "/projects/b93c5f96-2833-44e1-978a-50306a3b23f6/assets/auto_ml/auto_ml.AutoAIchurnmodel/wml_data/85813fc2-1c1d-49c9-b239-ba7e1dbd0c6d",
-                "training_status": "/projects/b93c5f96-2833-44e1-978a-50306a3b23f6/assets/auto_ml/auto_ml.AutoAIchurnmodel/wml_data/85813fc2-1c1d-49c9-b239-ba7e1dbd0c6d/training-status.json",
-                "assets_path": "/projects/b93c5f96-2833-44e1-978a-50306a3b23f6/assets/auto_ml/auto_ml.AutoAIchurnmodel/wml_data/85813fc2-1c1d-49c9-b239-ba7e1dbd0c6d/assets"
+                "path": "/projects/83a5f783-8df2-4997-ba4a-6cd91dc182c7/assets/auto_ml/auto_ml.AutoAIchurnmodel/wml_data",
+                "notebooks_path": "/projects/83a5f783-8df2-4997-ba4a-6cd91dc182c7/assets/auto_ml/auto_ml.AutoAIchurnmodel/wml_data/0887b7d7-1139-414e-a418-00296dc89c0b/notebooks",
+                "training": "/projects/83a5f783-8df2-4997-ba4a-6cd91dc182c7/assets/auto_ml/auto_ml.AutoAIchurnmodel/wml_data/0887b7d7-1139-414e-a418-00296dc89c0b",
+                "training_status": "/projects/83a5f783-8df2-4997-ba4a-6cd91dc182c7/assets/auto_ml/auto_ml.AutoAIchurnmodel/wml_data/0887b7d7-1139-414e-a418-00296dc89c0b/training-status.json",
+                "assets_path": "/projects/83a5f783-8df2-4997-ba4a-6cd91dc182c7/assets/auto_ml/auto_ml.AutoAIchurnmodel/wml_data/0887b7d7-1139-414e-a418-00296dc89c0b/assets"
               },
               "type": "fs"
             },
             "tags": [
-              "dsx-project.b93c5f96-2833-44e1-978a-50306a3b23f6"
+              "dsx-project.83a5f783-8df2-4997-ba4a-6cd91dc182c7"
             ],
             "test_data_references": [],
             "training_data_references": [
@@ -194,7 +194,7 @@
                 "connection": {},
                 "id": "COS_CHURN.csv",
                 "location": {
-                  "href": "/userfs/v2/assets/data_asset.COSCHURNcsv?project_id=b93c5f96-2833-44e1-978a-50306a3b23f6",
+                  "href": "/userfs/v2/assets/data_asset.COSCHURNcsv?project_id=83a5f783-8df2-4997-ba4a-6cd91dc182c7",
                   "id": "data_asset.COSCHURNcsv",
                   "userfs": "true"
                 },
@@ -229,6 +229,18 @@
       "object_key_is_read_only": true,
       "created_at": "2022-12-27T15:51:43Z",
       "id": "7f84eb50-7f49-4cf1-a78c-fb8bfe687212",
+      "is_managed": false,
+      "is_referenced": true,
+      "is_remote": false
+    },
+    {
+      "asset_type": "auto_ml",
+      "name": "referenced",
+      "description": "referenced attachment for auto_ml asset auto_ml.AutoAIchurnmodel",
+      "object_key": "auto_ml/auto_ml.AutoAIchurnmodel/attachments/referenced_auto_ml.AutoAIchurnmodel",
+      "object_key_is_read_only": true,
+      "created_at": "2023-01-10T16:35:02Z",
+      "id": "c0c1c14d-6edc-4edd-b8bb-721ad117c4df",
       "is_managed": false,
       "is_referenced": true,
       "is_remote": false

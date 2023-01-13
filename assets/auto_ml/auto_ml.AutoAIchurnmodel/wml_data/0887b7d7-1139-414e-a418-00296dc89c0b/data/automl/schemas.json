@@ -1,0 +1,231 @@
+[
+    {
+        "id": "auto_ai_kb_input_schema",
+        "fields": [
+            {
+                "name": "POLICYHOLDER_ID",
+                "type": "double"
+            },
+            {
+                "name": "CHURN_REASON",
+                "type": "other"
+            },
+            {
+                "name": "CHURN_DATE",
+                "type": "other"
+            },
+            {
+                "name": "HOUSEHOLD_ID",
+                "type": "double"
+            },
+            {
+                "name": "NAME",
+                "type": "other"
+            },
+            {
+                "name": "AGE",
+                "type": "double"
+            },
+            {
+                "name": "GENDER",
+                "type": "other"
+            },
+            {
+                "name": "EDUCATION",
+                "type": "other"
+            },
+            {
+                "name": "CONTACT",
+                "type": "double"
+            },
+            {
+                "name": "MARITAL_STATUS",
+                "type": "other"
+            },
+            {
+                "name": "EMPLOYMENT_STATUS",
+                "type": "other"
+            },
+            {
+                "name": "INCOME",
+                "type": "double"
+            },
+            {
+                "name": "HOME_OWNERSHIP_STATUS",
+                "type": "other"
+            },
+            {
+                "name": "LIFE_CUSTOMER",
+                "type": "other"
+            },
+            {
+                "name": "NON_LIFE_CUSTOMER",
+                "type": "other"
+            },
+            {
+                "name": "RETIREMENT_PLAN",
+                "type": "other"
+            },
+            {
+                "name": "VEHICLE_OWNERSHIP",
+                "type": "other"
+            },
+            {
+                "name": "VEHICLE_TYPE",
+                "type": "other"
+            },
+            {
+                "name": "VEHICLE_SIZE",
+                "type": "other"
+            },
+            {
+                "name": "INSURANCE_SCORE",
+                "type": "double"
+            },
+            {
+                "name": "PREFERRED_CHANNEL",
+                "type": "other"
+            },
+            {
+                "name": "EMAIL_ID",
+                "type": "other"
+            },
+            {
+                "name": "NUMBER_OF_MEMBERS",
+                "type": "double"
+            },
+            {
+                "name": "HOUSEHOLD_NUMBER_OF_CHILDREN",
+                "type": "double"
+            },
+            {
+                "name": "HOUSEHOLD_NUMBER_OF_INSURED_CARS",
+                "type": "double"
+            },
+            {
+                "name": "NUMBER_OF_POLICIES_IN_HOUSEHOLD",
+                "type": "double"
+            },
+            {
+                "name": "HOUSEHOLD_TENURE",
+                "type": "double"
+            },
+            {
+                "name": "HOUSEHOLD_PREMIUM",
+                "type": "double"
+            },
+            {
+                "name": "PROPERTY_MARKET_VALUE",
+                "type": "double"
+            },
+            {
+                "name": "HOUSEHOLD_DISPOSABLE_INCOME",
+                "type": "double"
+            },
+            {
+                "name": "GROSS_INCOME_MONTHLY",
+                "type": "double"
+            },
+            {
+                "name": "FIRST_HEAD_EMPLOYMENT_STATUS",
+                "type": "other"
+            },
+            {
+                "name": "FIRST_HEAD_SMOKER",
+                "type": "double"
+            },
+            {
+                "name": "RESIDENCY_LENGTH",
+                "type": "double"
+            },
+            {
+                "name": "SECOND_HEAD_SMOKER",
+                "type": "double"
+            },
+            {
+                "name": "POLICYHOLDER_SATISFACTION_DURATION",
+                "type": "double"
+            },
+            {
+                "name": "AVERAGE_CLAIM_AMOUNT",
+                "type": "double"
+            },
+            {
+                "name": "INSURANCE_LINES",
+                "type": "double"
+            },
+            {
+                "name": "NUMBER_OF_POLICIES",
+                "type": "double"
+            },
+            {
+                "name": "NUMBER_OF_POLICIES_SURRENDERED",
+                "type": "double"
+            },
+            {
+                "name": "TOTAL_PREMIUM",
+                "type": "double"
+            },
+            {
+                "name": "CLAIM_SETTLEMENT_DURATION",
+                "type": "double"
+            },
+            {
+                "name": "LATEST_NOTE_ATTITUDE",
+                "type": "double"
+            },
+            {
+                "name": "AVERAGE_NOTE_ATTITUDE",
+                "type": "double"
+            },
+            {
+                "name": "CLTV_VALUE",
+                "type": "double"
+            },
+            {
+                "name": "CHURN_SCORE",
+                "type": "double"
+            },
+            {
+                "name": "CUSTOMER_FINANCIAL_SEGMENT",
+                "type": "other"
+            },
+            {
+                "name": "CHANNEL_PROPENSITY_SCORE",
+                "type": "double"
+            },
+            {
+                "name": "CLTV",
+                "type": "other"
+            },
+            {
+                "name": "POLICYHOLDER_TENURE",
+                "type": "double"
+            },
+            {
+                "name": "NUMBER_OF_COMPLAINTS",
+                "type": "double"
+            },
+            {
+                "name": "NUMBER_OF_OPEN_COMPLAINTS",
+                "type": "double"
+            },
+            {
+                "name": "NO_OF_CLOSED_COMPLAINTS",
+                "type": "double"
+            },
+            {
+                "name": "NUMBER_OF_CLAIMS_FILED",
+                "type": "double"
+            },
+            {
+                "name": "NUMBER_OF_CLAIMS_DENIED",
+                "type": "double"
+            },
+            {
+                "name": "MAINTENANCE_COST",
+                "type": "double"
+            }
+        ]
+    }
+]

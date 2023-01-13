@@ -1,0 +1,28 @@
+{
+  "metadata": {
+    "asset_type": "connection",
+    "name": "Db2 on CP4D",
+    "origin_country": "us",
+    "rov": {
+      "mode": 0
+    },
+    "resource_key": "0000:0000:0000:0000:0000:FFFF:9EB1:D6E4|32418|bludb",
+    "asset_category": "USER",
+    "created_at": "2023-01-10T16:36:36Z",
+    "created": 1673368596587,
+    "asset_id": "connection.Db2onCP4D",
+    "asset_attributes": [
+      "connection"
+    ]
+  },
+  "entity": {
+    "connection": {
+      "datasource_type": "8c1a4480-1c29-4b33-9086-9cb799d7b157",
+      "context": "source,target",
+      "flags": [],
+      "ref_catalog_id": "e6ecc5ec-9960-4b67-a07a-c910c5a56ae8",
+      "ref_asset_id": "f8328109-ed72-4d23-b6ee-f347f1f54039"
+    }
+  },
+  "attachments": []
+}
